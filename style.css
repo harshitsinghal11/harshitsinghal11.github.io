@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* #295F4E #00B981 #02061C  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ::-webkit-scrollbar{
+    background-color: transparent;  
+}
+::-webkit-scrollbar-thumb{
+
+    border-radius: 5px 0px 0px 5px;
+    background-color: #00B981;
+} */
+body {
+    font-family: 'outfit';
+    height: auto;
+    background-color: #02061C;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(2, 6, 28, 0.5);
+    position: fixed;
+    top: 0;
+}
+
+nav #h_logo {
+    width: 64px;
+    margin-left: 1rem;
+}
+
+nav ul:not(.sidebar) {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 1rem;
+    color: #b1b1b1;
+}
+
+nav a:hover {
+    color: rgb(40, 40, 40);
+    transition: all 0.3s linear 0s;
+    background-color: #00B981;
+    border-radius: 50px;
+}
+
+.sidebar {
+    z-index: 1;
+    margin: 0rem;
+    display: none;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    background-color: rgba(63, 63, 63, 0.4);
+}
+
+.sidebar li {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .menuicon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul li a:not(.sidebar li a) {
+        display: none;
+    }
+}
+/* All the main Page Text Showing on Homepage */
+.mainpage{
+    margin-top: clamp(7rem, 25vw, 12rem);
+    margin-bottom: clamp(8rem, 25vw, 12rem);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+.profilepic > img{
+    margin: 1rem;
+    width: clamp(250px, 25vw, 400px);
+    border-radius: 50%;
+}
+.centered-text{
+    text-align: center;
+    color: #c8c8c8;
+}
+.centered-text h1{ 
+    line-height: clamp(7rem, 12vw, 9.5rem);
+    font-size: clamp(7rem, 12vw, 18rem);
+}
+.this-is-name{
+    white-space: nowrap;
+    font-size: clamp(2rem, 4vw, 13rem);
+}
+#name{
+    color: #00B981;
+}
+.centered-text > p{
+    margin: 0rem 1rem 0rem 1rem;
+    max-width: 500px;
+    font-size: clamp(1rem, 1.5vw, 8rem);
+}
+button{
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 2rem;
+    font-size: clamp(1rem, 3vw, 1rem);
+    font-family: inherit;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.signup-btn{
+    border: 2px solid #00B981;
+    background-color: #00b981;
+}
+.login-btn{
+    background-color: transparent;
+    border: 2px solid #00B981;
+}
+#skill-section{
+    color: #c8c8c8;
+    height: max-content;
+    width: 100%;
+    background-color: #000b29;
+}
+#skill-section h1{
+    text-align: center;
+    padding: 3rem;
+}
+.container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+}
+/* Heading ex:Frontend, backend etc */
+h3{
+    text-align: center;
+}
+/* Container in Which Languages/skills are stored */
+.innercontainer{
+    font-weight: 600;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0rem;
+    border-radius: 14px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.149);
+    backdrop-filter: blur(15px);
+}
+/* images of skills section */
+.innercontainer svg{
+    filter: invert(100%);
+    margin-right: 1rem;
+    width: 36px;
+}
+/* Properties of Skills Section */
+.html, .css, .js, .adobe, .figma{
+    border-radius: 12px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    border: 2px solid #c8c8c8;
+    display: flex;
+    align-items: center;
+}
+/* footer */
+footer{ 
+    width: 100%;
+    background-color: rgba(32, 32, 32, 0.504);
+    text-align: center;
+}
+footer h4{
+    display: inline-block;
+    padding: 1rem 0rem 1rem 0.5rem;
+}
+.greets{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+hr{
+    opacity: 0.5;
+}
+.content{
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+.content span{
+    font-size: 14px;
+}
