@@ -66,7 +66,7 @@ nav ul:not(.sidebar) {
 
 nav a {
     padding: 1rem;
-    color: #b1b1b1;
+    color: #c3c3c3;
 }
 
 nav a:hover {
@@ -117,19 +117,20 @@ nav a:hover {
     display: flex;
 }
 .profilepic > img{
-    margin: 1rem;
-    width: clamp(250px, 25vw, 400px);
+    margin-bottom: 1rem;
+    width: clamp(280px, 25vw, 400px);
     border-radius: 50%;
 }
 .centered-text{
-    text-align: center;
+    margin-left: 1.5rem;
     color: #c8c8c8;
 }
-.centered-text h1{ 
+.centered-text h1{
     line-height: clamp(7rem, 12vw, 9.5rem);
     font-size: clamp(7rem, 12vw, 18rem);
 }
 .this-is-name{
+    margin-left: clamp(0.5rem, 1vw, 1rem);
     white-space: nowrap;
     font-size: clamp(2rem, 4vw, 13rem);
 }
@@ -137,32 +138,41 @@ nav a:hover {
     color: #00B981;
 }
 .centered-text > p{
-    margin: 0rem 1rem 0rem 1rem;
+    margin-left: clamp(0.5rem, 1vw, 1rem);
+    margin-right: clamp(0.5rem, 1vw, 1rem);
     max-width: 500px;
     font-size: clamp(1rem, 1.5vw, 8rem);
 }
 button{
-    margin: 1rem 0.5rem 0rem 0.5rem;
-    padding: 0.5rem 2rem;
-    font-size: clamp(1rem, 3vw, 1rem);
+    margin: 1.5rem 0.5rem 0rem 0.5rem;
+    padding: 0.8rem 2rem;
+    font-size: clamp(1rem, 2.5vw, 1rem);
     font-family: inherit;
     border-radius: 12px;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    font-weight: 400;
+    border: none;
 }
-.signup-btn{
-    border: 2px solid #00B981;
+.download-btn{
     background-color: #00b981;
 }
-.login-btn{
-    background-color: transparent;
-    border: 2px solid #00B981;
+.download-btn:hover{
+    box-shadow: 0px 0px 50px #00B981;
+    transition: all 0.3s linear 0s;
 }
+.talk-btn{
+    background-color: transparent;
+}
+.talk-btn i{
+    margin-left: 0.5rem;
+}
+
 #skill-section{
-    color: #c8c8c8;
+    color: #d3d3d3;
     height: max-content;
     width: 100%;
-    background-color: #000b29;
+    background-color: #0c0334;
 }
 #skill-section h1{
     text-align: center;
@@ -222,6 +232,14 @@ footer h4{
 hr{
     opacity: 0.5;
 }
+.social a{
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: rgb(173, 173, 173);
+}
+.social {
+    margin: 1rem;
+}
 .content{
     margin-top: 1rem;
     padding-bottom: 1rem;
@@ -274,8 +292,8 @@ hr{
             <p>A Tech Enthusiast Who Builds Amazing Projects, If You Interested to Know about me, My Work Experience
                 Just Dig into in ...</p>
             <div class="buttons">
-                <a href="#"><button class="signup-btn">Signup</button></a>
-                <a href="#"><button class="login-btn">Login</button></a>
+                <a href="#"><button class="download-btn">Download CV</button></a>
+                <a href="#"><button class="talk-btn">Let's Talk<i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button></a>
             </div>
         </div>
     </div>
@@ -496,10 +514,18 @@ hr{
                 <span>Made with  <i class="fa-solid fa-heart" style="color: #ff0000;"></i></span><h4>Harshit Singhal</h4>
             </div>
             <hr>
+            <div class="social">
+                <a href="https://linktr.ee/harshit.singhal" target="_blank"><i class="fa-solid fa-link"></i></a>
+                <a href="https://github.com/harshitsinghal11" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/harshitsinghal11" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/harshitsinghal11" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/harshit__1103" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.com/users/1208756028145926176" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
             <div class="content">
                 <span>Harshit Singhal &bull;</span>
                 <span>&copy; 2024 &bull;</span>
-                <span>Projects</span>
+                <span>Need Help !</span>
             </div>
         </footer>
 </body>
