@@ -56,7 +56,7 @@ li {
 
 nav #h_logo {
     width: 64px;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 }
 
 nav ul:not(.sidebar) {
@@ -71,7 +71,7 @@ nav a {
     color: #c3c3c3;
 }
 
-nav a:hover {
+nav a:hover:not(.sidebar > li > a) {
     color: rgb(40, 40, 40);
     transition: all 0.3s linear 0s;
     background-color: #00B981;
@@ -80,18 +80,16 @@ nav a:hover {
 
 .sidebar {
     z-index: 1;
-    margin: 0rem;
     display: none;
     flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-start;
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 70%;
     height: 100vh;
     backdrop-filter: blur(20px);
-    background-color: rgba(63, 63, 63, 0.4);
+    font-weight: bold;
+    background-color: rgba(63, 63, 63, 0.5);
 }
 
 .sidebar li {
@@ -104,7 +102,7 @@ nav a:hover {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     ul li a:not(.sidebar li a) {
         display: none;
     }
@@ -131,7 +129,7 @@ nav a:hover {
 /* Hello Message On Front Page */
 .centered-text h1{
     font-weight: 500;
-    margin-left: clamp(0.5rem, 2vw, 1rem);
+    margin-left: clamp(0.5rem, 1vw, 1rem);
     font-size: clamp(3rem, 4vw, 10rem);
 }
 .this-is-name{
@@ -146,7 +144,7 @@ nav a:hover {
 .centered-text > p{
     margin-left: clamp(0.5rem, 1vw, 1rem);
     margin-right: clamp(0.5rem, 1vw, 1rem);
-    max-width: 500px;
+    max-width: 550px;
     font-size: clamp(1rem, 1.5vw, 8rem);
 }
 button{
@@ -180,9 +178,13 @@ button{
 #section-content{
     color: #c3c3c3;
     text-align: center;
-}
+}   
 #section-content > h1{
     padding: 2rem;
+    font-size: clamp(1.8rem,8vw,3rem);
+}
+#section-content > h3{
+    font-size: clamp(0.8rem,5vw,1.8rem);
 }
 /* footer */
 footer{ 
