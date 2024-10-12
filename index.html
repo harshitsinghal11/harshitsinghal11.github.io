@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshit Singhal | Portfolio</title>
-    <link rel="shortcut icon"
-        href="https://raw.githubusercontent.com/harshitsinghal11/harshitsinghal11.github.io/main/icons/H_Logo%20White.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="/icons/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +14,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    :root{
+    :root {
         --primary-color: #02061c;
         --secondary-color: #00b981;
         --third-color: rgb(16, 16, 16);
@@ -23,6 +22,7 @@
         --text-color: #282828;
 
     }
+
     * {
         padding: 0;
         margin: 0;
@@ -31,15 +31,6 @@
 
     html {
         scroll-behavior: smooth;
-    }
-
-    ::-webkit-scrollbar {
-        background-color: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        border-radius: 50px;
-        background-color: var(--secondary-color);
     }
 
     body {
@@ -56,13 +47,13 @@
         margin: 0.1rem;
         list-style: none;
     }
-    
-    .home{
+
+    .home {
         background-color: var(--secondary-color);
         color: var(--text-color);
         border-radius: 50px;
     }
-    
+
     .navbar {
         z-index: 1;
         display: flex;
@@ -86,7 +77,7 @@
     nav a {
         padding: 0.8rem;
         color: var(--defaultFont-color);
-    } 
+    }
 
     nav a:hover:not(.sidebar > li > a) {
         transition: all 0.3s linear 0s;
@@ -134,7 +125,7 @@
         display: flex;
     }
 
-    .profilepic > img {
+    .profilepic>img {
         width: clamp(280px, 25vw, 400px);
         margin-bottom: 1rem;
         border-radius: 50%;
@@ -163,14 +154,14 @@
         color: var(--secondary-color);
     }
 
-    .centered-text > p {
+    .centered-text>p {
         margin-left: clamp(0.5rem, 1vw, 1rem);
         margin-right: clamp(0.5rem, 1vw, 1rem);
         max-width: 550px;
         font-size: clamp(1rem, 1.5vw, 8rem);
     }
 
-    button{
+    button:not(.light, .night) {
         margin-top: 1.5rem;
         padding: 0.8rem 2rem;
         font-size: clamp(1rem, 2vw, 1rem);
@@ -178,14 +169,12 @@
         border-radius: 12px;
         cursor: pointer;
         border: none;
-        font-weight: 400;
     }
-    
+
     .download-btn {
         margin-left: clamp(0rem, 1vw, 1rem);
         color: var(--text-color);
         background-color: var(--secondary-color);
-        font-weight: bold;
     }
 
     .download-btn:hover {
@@ -202,13 +191,24 @@
         margin-left: 0.5rem;
     }
 
+    .mode {
+        margin: 1rem;
+    }
+
+    .light,
+    .night {
+        padding: 0.2rem;
+        background-color: transparent;
+        border: transparent;
+    }
+
     /* Website Section 2 */
     #section-content {
         color: var(--defaultFont-color);
         text-align: center;
     }
 
-    #section-content > h1 {
+    #section-content>h1 {
         padding: 2rem;
         font-size: clamp(1.8rem, 8vw, 3rem);
     }
@@ -229,7 +229,8 @@
         font-family: 'poppins';
         font-size: larger;
     }
-    #achievements h1{
+
+    #achievements h1 {
         margin-left: 1.5rem;
         font-size: clamp(1rem, 6vw, 2rem);
     }
@@ -249,12 +250,12 @@
         padding: 1rem 0rem 1rem 0.5rem;
     }
 
-    footer > #madelove {
+    footer>#madelove {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .social a {
         font-size: 2rem;
         padding: 0.5rem;
@@ -283,9 +284,9 @@
             <img src="/icons/logo.svg" alt="logo" id="logo">
             <ul>
                 <li><a href="#" class="home">Home</a></li>
-                <li><a href="/projects.html"class="project">Projects</a></li>
-                <li><a href="/about.html"class="about">About</a></li>
-                <li><a href="/contact.html"class="contact">Contact</a></li>
+                <li><a href="/projects.html" class="project">Projects</a></li>
+                <li><a href="/about.html" class="about">About</a></li>
+                <li><a href="/contact.html" class="contact">Contact</a></li>
                 <li href="#" onclick="showSidebar()" class="menuicon"><svg xmlns="http://www.w3.org/2000/svg"
                         height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
                         <path
@@ -295,8 +296,23 @@
                         d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z" />
                     </svg>
                 </li>
-                
             </ul>
+            <div class="mode">
+                <button class="light">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-434.5q-19.15 0-32.33-13.17Q34.5-460.85 34.5-480t13.17-32.33Q60.85-525.5 80-525.5h80q19.15 0 32.33 13.17Q205.5-499.15 205.5-480t-13.17 32.33Q179.15-434.5 160-434.5H80Zm720 0q-19.15 0-32.33-13.17Q754.5-460.85 754.5-480t13.17-32.33Q780.85-525.5 800-525.5h80q19.15 0 32.33 13.17Q925.5-499.15 925.5-480t-13.17 32.33Q899.15-434.5 880-434.5h-80Zm-320-320q-19.15 0-32.33-13.17Q434.5-780.85 434.5-800v-80q0-19.15 13.17-32.33Q460.85-925.5 480-925.5t32.33 13.17Q525.5-899.15 525.5-880v80q0 19.15-13.17 32.33Q499.15-754.5 480-754.5Zm0 720q-19.15 0-32.33-13.17Q434.5-60.85 434.5-80v-80q0-19.15 13.17-32.33Q460.85-205.5 480-205.5t32.33 13.17Q525.5-179.15 525.5-160v80q0 19.15-13.17 32.33Q499.15-34.5 480-34.5ZM222.17-673.93l-43-42Q165.5-728.61 166-747.76t13.17-33.07q13.44-13.67 32.59-13.67 19.15 0 32.07 13.67l42.24 43q12.67 13.44 12.55 31.71-.12 18.27-12.55 31.95-12.68 13.67-31.45 13.41-18.77-.26-32.45-13.17Zm494 494.76-42.24-43q-12.67-13.44-12.67-32.09 0-18.65 12.67-31.57 12.68-13.67 31.45-13.17t32.45 13.17l43 41.76q13.67 12.68 13.17 31.83t-13.17 33.07q-13.44 13.67-32.59 13.67-19.15 0-32.07-13.67Zm-42-494.76Q660.5-686.61 661-705.38t13.17-32.45l41.76-43q12.68-13.67 31.83-13.17t33.07 13.17q13.67 13.44 13.67 32.59 0 19.15-13.67 32.07l-43 42.24q-13.44 12.67-31.71 12.55-18.27-.12-31.95-12.55Zm-495 494.76q-13.67-13.44-13.67-32.59 0-19.15 13.67-32.07l43-42.24q13.44-12.67 32.09-12.67 18.65 0 31.57 12.67 13.67 12.68 13.17 31.45t-13.17 32.45l-41.76 43Q231.39-165.5 212.24-166t-33.07-13.17Z" />
+                    </svg>
+                </button>
+                <button class="night">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480.24-116.41q-153.63 0-258.73-104.98Q116.41-326.37 116.41-480q0-133.93 84.74-235.43t223.31-123.05q15.39-3.43 27.54 1.35 12.15 4.78 19.83 14.02 7.91 9.24 9.72 22.2 1.82 12.95-4.75 26.11-13.89 25.04-21.31 51.65-7.42 26.61-7.42 55.5 0 91.67 64.31 155.87 64.32 64.19 156.23 64.19 28.37 0 56.48-7.44 28.11-7.45 50.91-20.58 12.91-5.8 25.13-4.11 12.22 1.7 21.22 8.13 9.76 6.44 14.54 18.23 4.78 11.8 1.59 27.95Q820.17-291 717.63-203.71q-102.54 87.3-237.39 87.3Z" />
+                    </svg>
+                </button>
+            </div>
         </div>
         <!-- Resposive Navigation Bar for Small Devices -->
         <ul class="sidebar">
@@ -340,7 +356,7 @@
     <div id="achievements">
         <h1>Certificates</h1>
         <div class="certificates">
-    
+
         </div>
     </div>
     <!-- Website Footer Starts -->
